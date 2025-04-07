@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun, Salsa!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6f0;
+      color: #5c3c58;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #ffd6e0;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    audio {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Selamat Ulang Tahun, Salsa! 🎉</h1>
+</header>
+
+<section>
+  <p>Hi salsaa, selamat ulang tahun yaa maaf aku baru bisa ngucapin sekarang karna baru jadi hehe. Salsa semoga di umur yang baru ini salsa bisa jauh lebih happy yaa, aku happy sekali klo salsa lg cerita hal-hal yang buat salsa happy.</p>
+</section>
+
+<section>
+  <p>Di tahun ini aku bener-bener seneng banget salah satu wishlistku sudah terwujud dengan kedatangan salsa. Aku bener-bener ngerasa aku punya adik. Terima kasih yaa salsa udah hadir, salsa udah jadi salah satu bagian penting.</p>
+</section>
+
+<section>
+  <p>Salsa jangan pernah ngerasa sendiri yaa, klo salsa udah ngerasa semuanya lg sibuk 24/7 aku siap untuk jadi tempat salsa cerita xixi. Sekali lagi selamat ulang tahun yaa, semoga salsa sehat selalu, selalu dii tempatkan di tempat yang baik dan dipermudah segala urusannya.</p>
+</section>
+
+<section>
+  <p>Dan semoga wishlist salsa di tahun ini bisa terwujud semua. Aku selalu support apapun itu yang buat caca happy dan untuk hal-hal baik lainnya!</p>
+</section>
+
+<audio autoplay loop controls>
+  <source src="https://drive.google.com/uc?export=download&id=1xPYCk20Vz7rweHixvGf229lH6sQDnkVS" type="audio/mpeg">
+  Browser kamu tidak mendukung audio player.
+</audio>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('section').forEach((section) => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
